@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTarjeta = new System.Windows.Forms.TextBox();
-            this.panelBilletes = new System.Windows.Forms.Panel();
+            this.txtCard = new System.Windows.Forms.TextBox();
+            this.panelBills = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bntRetiro = new System.Windows.Forms.Button();
+            this.bntWhitD = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblSaldo = new System.Windows.Forms.Label();
+            this.lblBalance = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnConsulta = new System.Windows.Forms.Button();
-            this.panelSaldo = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.panelBilletes.SuspendLayout();
+            this.btnBalance = new System.Windows.Forms.Button();
+            this.panelBalance = new System.Windows.Forms.Panel();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.panelBills.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelSaldo.SuspendLayout();
+            this.panelBalance.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -56,28 +56,29 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Numero de tarjeta";
+            this.label1.Text = "Card number";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtTarjeta
+            // txtCard
             // 
-            this.txtTarjeta.Location = new System.Drawing.Point(12, 26);
-            this.txtTarjeta.Name = "txtTarjeta";
-            this.txtTarjeta.Size = new System.Drawing.Size(171, 20);
-            this.txtTarjeta.TabIndex = 1;
-            this.txtTarjeta.TextChanged += new System.EventHandler(this.txtTarjeta_TextChanged);
+            this.txtCard.Location = new System.Drawing.Point(12, 26);
+            this.txtCard.Name = "txtCard";
+            this.txtCard.Size = new System.Drawing.Size(171, 20);
+            this.txtCard.TabIndex = 1;
+            this.txtCard.TextChanged += new System.EventHandler(this.txtTarjeta_TextChanged);
             // 
-            // panelBilletes
+            // panelBills
             // 
-            this.panelBilletes.Controls.Add(this.button5);
-            this.panelBilletes.Controls.Add(this.button7);
-            this.panelBilletes.Controls.Add(this.button6);
-            this.panelBilletes.Controls.Add(this.button2);
-            this.panelBilletes.Controls.Add(this.label3);
-            this.panelBilletes.Enabled = false;
-            this.panelBilletes.Location = new System.Drawing.Point(216, 51);
-            this.panelBilletes.Name = "panelBilletes";
-            this.panelBilletes.Size = new System.Drawing.Size(262, 119);
-            this.panelBilletes.TabIndex = 2;
+            this.panelBills.Controls.Add(this.button5);
+            this.panelBills.Controls.Add(this.button7);
+            this.panelBills.Controls.Add(this.button6);
+            this.panelBills.Controls.Add(this.button2);
+            this.panelBills.Controls.Add(this.label3);
+            this.panelBills.Enabled = false;
+            this.panelBills.Location = new System.Drawing.Point(216, 50);
+            this.panelBills.Name = "panelBills";
+            this.panelBills.Size = new System.Drawing.Size(262, 119);
+            this.panelBills.TabIndex = 2;
             // 
             // button5
             // 
@@ -126,7 +127,8 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Billetes Disponibles";
+            this.label3.Text = "Avaible bills";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -139,81 +141,81 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(493, 38);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Banco del sur";
+            this.label2.Text = "South bank";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bntRetiro
+            // bntWhitD
             // 
-            this.bntRetiro.Enabled = false;
-            this.bntRetiro.Location = new System.Drawing.Point(12, 52);
-            this.bntRetiro.Name = "bntRetiro";
-            this.bntRetiro.Size = new System.Drawing.Size(171, 23);
-            this.bntRetiro.TabIndex = 6;
-            this.bntRetiro.Text = "Retiro de efectivo";
-            this.bntRetiro.UseVisualStyleBackColor = true;
-            this.bntRetiro.Click += new System.EventHandler(this.btnTarjeta_Click);
+            this.bntWhitD.Enabled = false;
+            this.bntWhitD.Location = new System.Drawing.Point(12, 52);
+            this.bntWhitD.Name = "bntWhitD";
+            this.bntWhitD.Size = new System.Drawing.Size(171, 23);
+            this.bntWhitD.TabIndex = 6;
+            this.bntWhitD.Text = "Withdrawal";
+            this.bntWhitD.UseVisualStyleBackColor = true;
+            this.bntWhitD.Click += new System.EventHandler(this.btnTarjeta_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 12);
+            this.label4.Location = new System.Drawing.Point(52, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 20);
+            this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Saldo disponible:";
+            this.label4.Text = "Balance:";
             // 
-            // lblSaldo
+            // lblBalance
             // 
-            this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaldo.Location = new System.Drawing.Point(129, 12);
-            this.lblSaldo.Name = "lblSaldo";
-            this.lblSaldo.Size = new System.Drawing.Size(18, 20);
-            this.lblSaldo.TabIndex = 8;
-            this.lblSaldo.Text = "0";
+            this.lblBalance.AutoSize = true;
+            this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBalance.Location = new System.Drawing.Point(129, 12);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(18, 20);
+            this.lblBalance.TabIndex = 8;
+            this.lblBalance.Text = "0";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnConsulta);
+            this.panel1.Controls.Add(this.btnBalance);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtTarjeta);
-            this.panel1.Controls.Add(this.bntRetiro);
+            this.panel1.Controls.Add(this.txtCard);
+            this.panel1.Controls.Add(this.bntWhitD);
             this.panel1.Location = new System.Drawing.Point(12, 51);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(198, 118);
             this.panel1.TabIndex = 9;
             // 
-            // btnConsulta
+            // btnBalance
             // 
-            this.btnConsulta.Enabled = false;
-            this.btnConsulta.Location = new System.Drawing.Point(12, 81);
-            this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(171, 23);
-            this.btnConsulta.TabIndex = 7;
-            this.btnConsulta.Text = "Consulta de saldo";
-            this.btnConsulta.UseVisualStyleBackColor = true;
-            this.btnConsulta.Click += new System.EventHandler(this.btnConsulta_Click);
+            this.btnBalance.Enabled = false;
+            this.btnBalance.Location = new System.Drawing.Point(12, 81);
+            this.btnBalance.Name = "btnBalance";
+            this.btnBalance.Size = new System.Drawing.Size(171, 23);
+            this.btnBalance.TabIndex = 7;
+            this.btnBalance.Text = "Check balance";
+            this.btnBalance.UseVisualStyleBackColor = true;
+            this.btnBalance.Click += new System.EventHandler(this.btnConsulta_Click);
             // 
-            // panelSaldo
+            // panelBalance
             // 
-            this.panelSaldo.Controls.Add(this.btnCerrarSesion);
-            this.panelSaldo.Controls.Add(this.label4);
-            this.panelSaldo.Controls.Add(this.lblSaldo);
-            this.panelSaldo.Location = new System.Drawing.Point(233, 77);
-            this.panelSaldo.Name = "panelSaldo";
-            this.panelSaldo.Size = new System.Drawing.Size(226, 65);
-            this.panelSaldo.TabIndex = 10;
+            this.panelBalance.Controls.Add(this.btnSignOut);
+            this.panelBalance.Controls.Add(this.label4);
+            this.panelBalance.Controls.Add(this.lblBalance);
+            this.panelBalance.Location = new System.Drawing.Point(233, 77);
+            this.panelBalance.Name = "panelBalance";
+            this.panelBalance.Size = new System.Drawing.Size(226, 65);
+            this.panelBalance.TabIndex = 10;
             // 
-            // btnCerrarSesion
+            // btnSignOut
             // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(46, 35);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(140, 23);
-            this.btnCerrarSesion.TabIndex = 11;
-            this.btnCerrarSesion.Text = "Cerrar Sesion";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.CerrarSesion);
+            this.btnSignOut.Location = new System.Drawing.Point(46, 35);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(140, 23);
+            this.btnSignOut.TabIndex = 11;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.UseVisualStyleBackColor = true;
+            this.btnSignOut.Click += new System.EventHandler(this.CerrarSesion);
             // 
             // Caja
             // 
@@ -222,17 +224,17 @@
             this.ClientSize = new System.Drawing.Size(493, 189);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panelBilletes);
-            this.Controls.Add(this.panelSaldo);
+            this.Controls.Add(this.panelBills);
+            this.Controls.Add(this.panelBalance);
             this.MaximumSize = new System.Drawing.Size(509, 228);
             this.MinimumSize = new System.Drawing.Size(509, 228);
             this.Name = "Caja";
             this.Text = "Retiro de dinero";
-            this.panelBilletes.ResumeLayout(false);
+            this.panelBills.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelSaldo.ResumeLayout(false);
-            this.panelSaldo.PerformLayout();
+            this.panelBalance.ResumeLayout(false);
+            this.panelBalance.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -240,21 +242,21 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTarjeta;
-        private System.Windows.Forms.Panel panelBilletes;
+        private System.Windows.Forms.TextBox txtCard;
+        private System.Windows.Forms.Panel panelBills;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button bntRetiro;
+        private System.Windows.Forms.Button bntWhitD;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblSaldo;
+        private System.Windows.Forms.Label lblBalance;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelSaldo;
-        private System.Windows.Forms.Button btnConsulta;
-        private System.Windows.Forms.Button btnCerrarSesion;
+        private System.Windows.Forms.Panel panelBalance;
+        private System.Windows.Forms.Button btnBalance;
+        private System.Windows.Forms.Button btnSignOut;
     }
 }
 
