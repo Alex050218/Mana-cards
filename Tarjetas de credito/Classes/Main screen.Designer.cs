@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCard = new System.Windows.Forms.TextBox();
             this.panelBills = new System.Windows.Forms.Panel();
+            this.btnEverything = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -69,22 +70,33 @@
             // 
             // panelBills
             // 
+            this.panelBills.Controls.Add(this.btnEverything);
             this.panelBills.Controls.Add(this.button5);
             this.panelBills.Controls.Add(this.button7);
             this.panelBills.Controls.Add(this.button6);
             this.panelBills.Controls.Add(this.button2);
             this.panelBills.Controls.Add(this.label3);
             this.panelBills.Enabled = false;
-            this.panelBills.Location = new System.Drawing.Point(216, 50);
+            this.panelBills.Location = new System.Drawing.Point(219, 50);
             this.panelBills.Name = "panelBills";
             this.panelBills.Size = new System.Drawing.Size(262, 119);
             this.panelBills.TabIndex = 2;
             // 
+            // btnEverything
+            // 
+            this.btnEverything.Location = new System.Drawing.Point(33, 77);
+            this.btnEverything.Name = "btnEverything";
+            this.btnEverything.Size = new System.Drawing.Size(191, 28);
+            this.btnEverything.TabIndex = 10;
+            this.btnEverything.Text = "Withdraw Everything";
+            this.btnEverything.UseVisualStyleBackColor = true;
+            this.btnEverything.Click += new System.EventHandler(this.Withdraw_all);
+            // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(33, 70);
+            this.button5.Location = new System.Drawing.Point(33, 51);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 27);
+            this.button5.Size = new System.Drawing.Size(75, 20);
             this.button5.TabIndex = 9;
             this.button5.Text = "200";
             this.button5.UseVisualStyleBackColor = true;
@@ -92,9 +104,9 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(149, 70);
+            this.button7.Location = new System.Drawing.Point(149, 51);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 27);
+            this.button7.Size = new System.Drawing.Size(75, 20);
             this.button7.TabIndex = 8;
             this.button7.Text = "100";
             this.button7.UseVisualStyleBackColor = true;
@@ -102,9 +114,9 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(149, 39);
+            this.button6.Location = new System.Drawing.Point(149, 27);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(75, 20);
             this.button6.TabIndex = 7;
             this.button6.Text = "500";
             this.button6.UseVisualStyleBackColor = true;
@@ -112,9 +124,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(33, 37);
+            this.button2.Location = new System.Drawing.Point(33, 27);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 27);
+            this.button2.Size = new System.Drawing.Size(75, 20);
             this.button2.TabIndex = 6;
             this.button2.Text = "50";
             this.button2.UseVisualStyleBackColor = true;
@@ -202,6 +214,7 @@
             this.panelBalance.Controls.Add(this.btnSignOut);
             this.panelBalance.Controls.Add(this.label4);
             this.panelBalance.Controls.Add(this.lblBalance);
+            this.panelBalance.Enabled = false;
             this.panelBalance.Location = new System.Drawing.Point(233, 77);
             this.panelBalance.Name = "panelBalance";
             this.panelBalance.Size = new System.Drawing.Size(226, 65);
@@ -257,6 +270,7 @@
         private System.Windows.Forms.Panel panelBalance;
         private System.Windows.Forms.Button btnBalance;
         private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Button btnEverything;
     }
 }
 
